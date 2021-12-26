@@ -84,8 +84,11 @@ module.exports = async (bot, query) => {
                 text += "00";
                 await bot.editMessageText(text, editOptions);
             } else if (data == "back") {
-                if (text !== "0") {
+                if (text.length > 1) {
                     text = text.slice(0, -1);
+                    await bot.editMessageText(text, editOptions);
+                } else if(text.length === 1) {
+                    text = "0";
                     await bot.editMessageText(text, editOptions);
                 }
             } else if (data == "==") {
