@@ -89,7 +89,7 @@ module.exports = async (bot, query) => {
                     await bot.editMessageText(text, editOptions);
                 }
             } else if (data == "==") {
-                let result = eval(text.replace(/[x]/g, "*"));
+                let result = eval(text.replace(/[x]/g, "*").slice(2));
                 text = result;
                 await bot.editMessageText(text, editOptions);
             }
