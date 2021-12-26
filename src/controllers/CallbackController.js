@@ -61,7 +61,7 @@ module.exports = async (bot, query) => {
                 text += "9";
                 await bot.editMessageText(text, editOptions);
             } else if (data == "0") {
-                if(text[0] !== "0") {
+                if(text[1] !== "0") {
                     text += "0";
                     await bot.editMessageText(text, editOptions);
                 }
