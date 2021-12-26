@@ -1,0 +1,84 @@
+[
+    [
+        {
+            "text": "C",
+            "callback_data": "clear"
+        },
+        {
+            "text": "➗",
+            "callback_data": "divide"
+        },
+        {
+            "text": "➖",
+            "callback_data": "minus"
+        }
+    ],
+    [
+        {
+            "text": "7️⃣",
+            "callback_data": "7"
+        },
+        {
+            "text": "8️⃣",
+            "callback_data": "8"
+        },
+        {
+            "text": "9️⃣",
+            "callback_data": "9"
+        },
+        {
+            "text": "✖️",
+            "callback_data": "multiple"
+        }
+    ],
+    [
+        {
+            "text": "4️⃣",
+            "callback_data": "4"
+        },
+        {
+            "text": "5️⃣",
+            "callback_data": "5"
+        },
+        {
+            "text": "6️⃣",
+            "callback_data": "6"
+        },
+        {
+            "text": "➕",
+            "callback_data": "plus"
+        }
+    ],
+    [
+        {
+            "text": "1️⃣",
+            "callback_data": "1"
+        },
+        {
+            "text": "2️⃣",
+            "callback_data": "2"
+        },
+        {
+            "text": "3️⃣",
+            "callback_data": "3"
+        },
+        {
+            "text": "0️⃣",
+            "callback_data": "0"
+        }
+    ],
+    [
+        {
+            "text": "0️⃣0️⃣",
+            "callback_data": "00"
+        },
+        {
+            "text": "==",
+            "callback_data": "=="
+        },
+        {
+            "text": "🔙",
+            "callback_data": "back"
+        }
+    ]
+]
