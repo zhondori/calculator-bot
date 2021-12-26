@@ -60,6 +60,11 @@ module.exports = async (bot, query) => {
             } else if (data == "9") {
                 text += "9";
                 await bot.editMessageText(text, editOptions);
+            } else if (data == "0") {
+                if(text[0] !== "0") {
+                    text += "0";
+                    await bot.editMessageText(text, editOptions);
+                }
             } else if (data == "plus") {
                 if (!hints.includes(text[text.length - 1])) {
                     text += "+";
@@ -87,7 +92,7 @@ module.exports = async (bot, query) => {
                 if (text.length > 1) {
                     text = text.slice(0, -1);
                     await bot.editMessageText(text, editOptions);
-                } else if(text.length === 1) {
+                } else if (text.length === 1) {
                     text = "0";
                     await bot.editMessageText(text, editOptions);
                 }
