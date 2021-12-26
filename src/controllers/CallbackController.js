@@ -12,6 +12,7 @@ module.exports = async (bot, query) => {
             inline_keyboard
         }
     }
+    let hints = ["+", "-", "/", "x"];
     try {
         let member = await bot.getChatMember(CHAT_ID, chatId);
         if (data == "check_is_member") {
@@ -60,17 +61,25 @@ module.exports = async (bot, query) => {
                 text += "9";
                 await bot.editMessageText(text, editOptions);
             } else if (data == "plus") {
-                text += "+";
-                await bot.editMessageText(text, editOptions);
+                if (!hints.includes(text[text.length - 1])) {
+                    text += "+";
+                    await bot.editMessageText(text, editOptions);
+                }
             } else if (data == "minus") {
-                text += "-";
-                await bot.editMessageText(text, editOptions);
+                if (!hints.includes(text[text.length - 1])) {
+                    text += "-";
+                    await bot.editMessageText(text, editOptions);
+                }
             } else if (data == "multiple") {
-                text += "x";
-                await bot.editMessageText(text, editOptions);
+                if (!hints.includes(text[text.length - 1])) {
+                    text += "x";
+                    await bot.editMessageText(text, editOptions);
+                }
             } else if (data == "divide") {
-                text += "/";
-                await bot.editMessageText(text, editOptions);
+                if (!hints.includes(text[text.length - 1])) {
+                    text += "/";
+                    await bot.editMessageText(text, editOptions);
+                }
             } else if (data == "00") {
                 text += "00";
                 await bot.editMessageText(text, editOptions);
